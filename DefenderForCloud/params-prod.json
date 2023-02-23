@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "policySource": {
+            "value": "https://dev.azure.com/hjortland-cloud/_git/AUG-Policy"
+        },
+        "policyCategory": {
+            "value": "Custom"
+        },
+        "assignmentEnforcementMode": {
+            "value": "Default"
+        },
+        "assignmentIdentityLocation": {
+            "value": "westeurope"
+        },
+        "initiativeName": {
+            "value": "Company Defender for Cloud"
+        },
+        "defenderForServerEffect": {
+            "value": "DeployIfNotExists"
+        },
+        "defenderForKeyVaultEffect": {
+            "value": "DeployIfNotExists"
+        },
+        "defenderForDNSEffect": {
+            "value": "DeployIfNotExists"
+        },
+        "defenderForRgEffect": {
+            "value": "DeployIfNotExists"
+        },
+        "defenderForStorageEffect": {
+            "value": "DeployIfNotExists"
+        },
+        "defenderForCSPMEffect": {
+            "value": "DeployIfNotExists"
+        },       
+        "assignmentMG":{
+            "value": [
+                {
+                    "mg": "company-MG",
+                    "assignmentName": "CorpDefender",
+                    "assignmentDisplayName": "Company Defender",
+                    "assignmentVersion": "1.0.0",
+                    "roleAssignmentName": "DefenderRoleAssignment"
+                }
+            ]
+        }, 
+        "exemptionMG":{
+            "value": []
+        },
+        "userAssignedManagedIdentity": {
+            "value": "/subscriptions/576816d5-da31-4330-9446-2f24a756179a/resourcegroups/rgp-prd-azure-policy/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-azurepolicy"
+        },
+        "userAssignedManagedIdentityObjectId": {
+            "value": "42a657b4-ae27-4eb4-8adb-2fd1c6b72445"
+        },
+        "vulnerabilityAssessmentEffect":{
+            "value": "DeployIfNotExists"
+        },
+        "vaType":{
+            "value": "default"
+        },
+        "emailSecurityContact": {
+            "value": "soc@hjortland.cloud"
+        },
+        "mdcSecurityContactEffect":{
+            "value": "DeployIfNotExists"
+        },
+        "minimalSeverity":{
+            "value": "High"
+        }
+    }
+}

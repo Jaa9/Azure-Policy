@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "initiativeName": {
+            "value": "Company Compliance"
+        },
+        "policySource": {
+            "value": "https://dev.azure.com/hjortland-cloud/_git/AUG-Policy"
+        },
+        "assignmentEnforcementMode": {
+            "value": "Default"
+        },
+        "listOfAllowedLocations": {
+            "value": [
+                "northeurope",
+                "westeurope",
+                "norwayeast",
+                "norwaywest",
+                "swedencentral",
+                "global",
+                "europe"    
+            ]
+        },
+        "assignmentIdentityLocation": {
+            "value": "westeurope"
+        },
+        "storageAccountEffect": {
+            "value": "Deny"
+        },
+        "storageAccountAclEffect": {
+            "value": "Audit"
+        },
+        "keyVaultFirewallEffect": {
+            "value": "Audit"
+        }, 
+        "assignmentMG":{
+            "value": [
+                {
+                    "mg": "company-MG",
+                    "assignmentName": "CorpCompliance",
+                    "assignmentDisplayName": "Company Compliance",
+                    "assignmentVersion": "1.0.0"
+                }
+            ]
+        }, 
+        "exemptionMG":{
+            "value": [
+                {
+                    "mg": "sandbox-MG",
+                    "exemptionDeploymentName": "SandboxComplianceExcemption",
+                    "exemptionDisplayName": "Sandbox Compliance Excemption",
+                    "exemptionDescription": "Management Groups exempted from general compliance policies",
+                    "exemptionExpiryDate": "",
+                    "exemptionCategory": "Waiver",
+                    "exemptionVersion": "1.0.0"
+                }
+            ]
+        }
+    }
+}

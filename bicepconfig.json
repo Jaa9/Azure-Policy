@@ -1,0 +1,18 @@
+{
+    "analyzers": {
+      "core": {
+        "enabled": true,
+        "rules": {
+          "no-unused-params": {
+            "level": "off"
+          },
+          "no-unused-vars": {
+            "level": "off"
+          },
+          "use-resource-id-functions": {
+            "level": "off"
+          }
+        }
+      }
+    }
+  }
